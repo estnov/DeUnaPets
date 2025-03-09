@@ -133,6 +133,9 @@ public:
         // Identificar gastos recurrentes
         identify_recurrent_ant_expenses(ant_expenses);
 
+        // Generar el archivo de recurrencias
+        generate_recurrences_data(ant_expenses);
+
         // En lugar de usar regresión lineal, se emplea un modelo de series de tiempo:
         vector<double> predicted = perform_time_series_forecast(daily_totals);
         predict_next_month(predicted);
@@ -318,11 +321,27 @@ private:
     }
 
     void generate_plot_data(const vector<double>& data) {
-        ofstream file("prediccion.dat");
+        ofstream file("serie_tiempo.dat");
         for (size_t i = 0; i < data.size(); ++i) {
             file << (i + 1) << " " << data[i] << "\n";
         }
     }
+
+void generate_recurrences_data(const vector<Transaction>& ant_expenses) {
+    map<string, pair<int, double>> description_info; // Almacena el conteo y el total
+
+    // Calcular el número de veces y el total gastado en cada descripción recurrente
+    for (const auto& t : ant_expenses) {
+        description_info[t.description].first++;  // Incrementar el conteo
+        description_info[t.description].second += t.amount; // Sumar el monto
+    }
+
+    // Escribir los datos en el archivo recurrencias.dat
+    ofstream file("recurrencias.dat");
+    for (const auto& [desc, info] : description_info) {
+        file << desc << " " << info.second << " " << info.first << "\n";
+    }
+}
 };
 
 int main() {
