@@ -1,0 +1,38 @@
+.create-pet-container {
+    width: 100%;
+    max-width: 420px; /* Máximo de ancho para simular una pantalla móvil */
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #04d3a5;
+  
+    /* Centrar contenido horizontal y verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .imageLoading {
+      width: 300px;
+      /* Animación: del 75% al 65% de ancho en 2s */
+      animation: shrinkImg 4s forwards;
+    }
+  }
+  
+  /* Keyframe que anima el ancho de la imagen */
+  @keyframes shrinkImg {
+    0% {
+      width: 300px;
+    }
+    25% {
+      width: 200px;
+    }
+    50% {
+      width: 300px;
+    }
+    75% {
+      width: 200px;
+    }
+  }
+  

@@ -6,19 +6,20 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @Component({
-  selector: 'app-home-page',
+  selector: 'app-create-pet',
   imports: [
     NzButtonModule,
     HttpClientModule,
     NzIconModule,
     NzAvatarModule],
-  templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss'
+  templateUrl: './create-pet.component.html',
+  styleUrl: './create-pet.component.scss'
 })
-export class HomePageComponent {
+export class CreatePetComponent {
+
   constructor(private router: Router) {}
 
-  pagarQR(): void {
-    this.router.navigate(['/home2']);
+  goToInstructions(): void {
+    this.router.navigate(['/instrucciones']);
   }
 }

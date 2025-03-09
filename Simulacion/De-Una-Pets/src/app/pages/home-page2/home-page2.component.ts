@@ -1,24 +1,19 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @Component({
-  selector: 'app-home-page',
+  selector: 'app-home-page2',
   imports: [
     NzButtonModule,
     HttpClientModule,
     NzIconModule,
     NzAvatarModule],
-  templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss'
+  templateUrl: './home-page2.component.html',
+  styleUrl: './home-page2.component.scss'
 })
-export class HomePageComponent {
-  constructor(private router: Router) {}
+export class HomePage2Component {
 
-  pagarQR(): void {
-    this.router.navigate(['/home2']);
-  }
 }
