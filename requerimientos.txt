@@ -1,0 +1,23 @@
+# Compilador requerido
+g++ >= 9.0
+
+# Estándar de C++
+std=c++17
+
+# Bibliotecas estándar utilizadas (no requieren instalación adicional)
+iostream
+fstream
+sstream
+string
+vector
+algorithm
+map
+iomanip
+cmath
+numeric
+memory
+stdexcept
+random
+
+# Comando sugerido para compilar
+# g++ -std=c++17 -o FinancialAnalyzer main.cpp
