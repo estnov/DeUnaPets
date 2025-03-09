@@ -1,0 +1,252 @@
+.home-container {
+    width: 100%;
+    max-width: 420px; /* Máximo de ancho para simular una pantalla móvil */
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+  }
+  
+  /* Encabezado */
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  
+    .time {
+      font-size: 1rem;
+      color: #333;
+    }
+  
+    .user-info {
+      display: flex;
+      align-items: center;
+  
+      .avatar {
+        margin-right: 0.5rem;
+      }
+  
+      .greeting {
+        font-weight: 500;
+        .wave {
+          margin-left: 4px;
+        }
+      }
+    }
+  
+    .actions-top {
+      display: flex;
+      gap: 0.5rem;
+  
+      .btn-icon {
+        border: none;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      }
+    }
+  }
+  
+  /* Tarjeta Promo */
+  .promo-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    .promo-text {
+      .promo-title {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+      .promo-subtitle {
+        font-size: 0.9rem;
+        color: #888;
+      }
+    }
+  
+    .promo-icon img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+  }
+  
+  /* Tarjeta Saldo */
+  .balance-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  
+    .balance-title {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+  
+    .balance-amount {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      margin-bottom: 0.5rem;
+  
+      .amount {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+  
+      .eye-btn {
+        border: none;
+        background: #f5f5f5;
+      }
+    }
+  
+    .balance-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+  
+      .balance-text {
+        font-size: 0.9rem;
+        color: #555;
+      }
+  
+      .balance-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+  
+        .btn-recharge {
+          border-radius: 20px;
+        }
+  
+        .to-d {
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: #5b3f90; /* color representativo si deseas */
+        }
+      }
+    }
+  }
+  
+  /* Tarjeta Info */
+  .info-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    .info-text {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  
+    .info-image img {
+      width: 80px;
+      height: auto;
+    }
+  }
+  
+  /* Indicador tipo carrusel */
+  .carousel-indicator {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: #ccc;
+      border-radius: 50%;
+      margin: 0 4px;
+    }
+    .dot.active {
+      background: #5b3f90; /* ejemplo de color activo */
+    }
+  }
+  
+  /* Menú de acciones */
+  .action-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  
+    .action-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #333;
+  
+      img {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+  
+  /* Botones principales */
+  .main-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  
+    .transfer-btn {
+      flex: 1;
+      margin-right: 0.5rem;
+      background: #fff;
+      color: #5b3f90;
+      border: 1px solid #5b3f90;
+    }
+  
+    .qr-btn {
+      flex: 1;
+      margin-left: 0.5rem;
+      background: #5b3f90; /* color principal */
+      border: none;
+    }
+  }
+  
+  /* Navegación inferior */
+  .bottom-nav {
+    background: #fff;
+    border-radius: 8px 8px 0 0;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    position: fixed; /* Si quieres fijarlo abajo */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 420px; 
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #333;
+  
+      i {
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
+  
