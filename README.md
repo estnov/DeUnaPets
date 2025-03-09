@@ -3,17 +3,19 @@
    git clone https://github.com/estnov/DeUnaPets.git
 
 2. Instala las dependencias:
-   pip install -r requimientos.txt
+   cd .\DeUnaPets\Simulacion\De-Una-Pets\
+   npm install
+   
 
 ---
 # Modelos
 
 ## Descripción
-Este directorio contiene un programa en C++ diseñado para analizar transacciones financieras a partir de un archivo CSV. El objetivo principal es identificar y clasificar los gastos hormiga, predecir los gastos futuros mediante un modelo de series de tiempo y generar datos para gráficos. El programa utiliza técnicas de análisis estadístico y modelado para proporcionar insights útiles sobre los hábitos de gasto.
+Este directorio contiene un programa en C++ diseñado para analizar transacciones financieras a partir de un archivo CSV y una simulación del entorno DeUna para el proyecto con la implementación DeUna pets. El objetivo principal es identificar y clasificar los gastos hormiga, predecir los gastos futuros mediante un modelo de series de tiempo y expresar estas conclusiones en una mascota virtual la cual correlacionará su estado emocional acorde al nivel de organización financiera del usuario. El programa en c++ utiliza técnicas de análisis estadístico y modelado para proporcionar insights útiles sobre los hábitos de gasto; mientras que la simulación se ha desarrollado enteramente en Angular.
  
 ---
 
-## Descripción del Algoritmo
+## Descripción del Algoritmo de análisis de datos
 El programa sigue estos pasos:
 
 1. **Carga de Datos:**
@@ -21,7 +23,7 @@ El programa sigue estos pasos:
 - Limpia y valida los datos antes de procesarlos.
 
 2. **Clasificación de Gastos Hormiga:**
-- Calcula un umbral percentil (25%) para identificar los gastos pequeños y frecuentes.
+- Calcula un umbral percentil (al 25% e inferiores) para identificar los gastos pequeños y frecuentes.
 - Imprime y guarda los gastos hormiga detectados.
 
 3. **Identificación de Gastos Recurrentes:**
